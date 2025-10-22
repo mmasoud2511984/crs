@@ -1,0 +1,35 @@
+// =============================================================================
+// ملف 1: /install/config/databases.json
+// =============================================================================
+/*
+{
+  "databases": [
+    {
+      "id": 1,
+      "prefix": "u995861180_",
+      "dbname": "db01",
+      "username": "db01_user",
+      "password": "StrongPass123!",
+      "status": "available",
+      "reserved_at": null,
+      "reserved_by": null
+    },
+    {
+      "id": 2,
+      "prefix": "u995861180_",
+      "dbname": "db02",
+      "username": "db02_user",
+      "password": "StrongPass456!",
+      "status": "available",
+      "reserved_at": null,
+      "reserved_by": null
+    }
+    // ... حتى 50
+  ],
+  "settings": {
+    "host": "localhost",
+    "port": "3306",
+    "auto_release_after_hours": 24
+  }
+}
+*/
