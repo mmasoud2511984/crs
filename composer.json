@@ -1,0 +1,68 @@
+{
+    "name": "carrental/management-system",
+    "description": "Car Rental Management System - نظام إدارة تأجير السيارات",
+    "type": "project",
+    "keywords": [
+        "car rental",
+        "rental management",
+        "fleet management",
+        "تأجير سيارات",
+        "إدارة تأجير"
+    ],
+    "license": "proprietary",
+    "require": {
+        "php": ">=8.2",
+        "ext-pdo": "*",
+        "ext-mysqli": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-curl": "*",
+        "ext-gd": "*",
+        "ext-zip": "*",
+        "ext-fileinfo": "*",
+        "vlucas/phpdotenv": "^5.5",
+        "phpmailer/phpmailer": "^6.8",
+        "tecnickcom/tcpdf": "^6.6",
+        "sonata-project/google-authenticator": "^2.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "phpstan/phpstan": "^1.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/",
+            "App\\Controllers\\": "app/controllers/",
+            "App\\Models\\": "app/models/",
+            "Services\\": "services/"
+        },
+        "files": [
+            "core/Helper.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-install-cmd": [
+            "@php -r \"echo '✅ Dependencies installed successfully!\\n';\""
+        ],
+        "test": "phpunit",
+        "analyse": "phpstan analyse"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
